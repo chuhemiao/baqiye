@@ -19,7 +19,7 @@
     <div class="template">
         <div class="box">
             <h3>
-                <p><span>站长</span>推荐 Recommend</p>
+                <p><span>禾子</span>推荐 Recommend</p>
             </h3>
             <ul>
                 @foreach($pics as $p)
