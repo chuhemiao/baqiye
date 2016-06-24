@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateLinksTable extends Migration
+class CreatemediaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,13 +12,15 @@ class CreateLinksTable extends Migration
      */
     public function up()
     {
-        Schema::create('links', function (Blueprint $table) {
+        Schema::create('media', function (Blueprint $table) {
             $table->engine = 'MyISAM';
-            $table->increments('link_id');
-            $table->string('link_name')->default('')->comment('//名称');
-            $table->string('link_title')->default('')->comment('//标题');
-            $table->string('link_url')->default('')->comment('//链接');
-            $table->integer('link_order')->default(0)->comment('//排序');
+            $table->increments('media_id');
+            $table->string('media_name')->default('')->comment('//名称');
+            $table->string('media_img')->default('')->comment('//存储地址');
+            $table->string('create_time')->default('')->comment('//创建时间');
+            $table->string('media_url')->default('')->comment('//外链链接');
+            $table->string('media_intro')->default('')->comment('//简介');
+            $table->integer('media_order')->default(0)->comment('//排序');
         });
     }
 
@@ -29,6 +31,6 @@ class CreateLinksTable extends Migration
      */
     public function down()
     {
-        Schema::drop('links');
+        Schema::drop('media');
     }
 }

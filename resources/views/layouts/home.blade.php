@@ -33,7 +33,7 @@
 @yield('content')
 
 <footer>
-    <p>Design by chuhe <a href="http://idiot6.com/" target="_blank">梦遥奇缘</a></p>
+    <p>{{Config::get('web.copyright')}}</p>
 </footer>
 </body>
 </html>

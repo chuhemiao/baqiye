@@ -38,6 +38,10 @@ Route::group(['middleware' => ['web','admin.login'],'prefix'=>'admin','namespace
 
     Route::post('navs/changeorder', 'NavsController@changeOrder');
     Route::resource('navs', 'NavsController');
+    // 图床
+    Route::post('photos/changeorder', 'photosController@changeOrder');
+    Route::resource('photos', 'photosController');
+
 
     Route::get('config/putfile', 'ConfigController@putFile');
     Route::post('config/changecontent', 'ConfigController@changeContent');
