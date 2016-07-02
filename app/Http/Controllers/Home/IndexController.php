@@ -11,7 +11,7 @@ class IndexController extends CommonController
     {
         
         //图文列表5篇（带分页）
-        $data = Article::orderBy('art_time','desc')->paginate(9);
+        $data = Article::orderBy('art_time','desc')->paginate(6);
 
         return view('home.index',compact('pics','data'));
     }
