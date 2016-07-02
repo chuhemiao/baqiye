@@ -6,59 +6,96 @@
 @endsection
 
 @section('content')
-    <div class="banner">
-        <section class="box">
-            <ul class="texts">
-                <p>打了死结的青春，捆死一颗苍白绝望的灵魂。</p>
-                <p>为自己掘一个坟墓来葬心，红尘一梦，不再追寻。</p>
-                <p>加了锁的青春，不会再因谁而推开心门。</p>
-            </ul>
-            <div class="avatar"><a href="#"><span>梦遥奇缘</span></a> </div>
-        </section>
-    </div>
-    <div class="template">
-        <div class="box">
-            <h3>
-                <p><span>禾子</span>推荐 Recommend</p>
-            </h3>
-            <ul>
-                @foreach($pics as $p)
-                <li><a href="{{url('a/'.$p->art_id)}}"  target="_blank"><img src="{{url($p->art_thumb)}}"></a><span>{{$p->art_title}}</span></li>
-                @endforeach
-            </ul>
-        </div>
-    </div>
-    <article class="blogs">
-        <h2 class="title_tj">
-            <p>文章<span>推荐</span></p>
-        </h2>
-        <div class="bloglist left">
-            @foreach($data as $d)
-            <h3>{{$d->art_title}}</h3>
-            <figure><img src="{{url($d->art_thumb)}}"></figure>
-            <ul>
-                <p>{{$d->art_description}}</p>
-                <a title="{{$d->art_title}}" href="{{url('a/'.$d->art_id)}}" target="_blank" class="readmore">阅读全文>></a>
-            </ul>
-            <p class="dateview"><span>{{date('Y-m-d',$d->art_time)}}</span><span>作者：{{$d->art_editor}}</span></p>
-            @endforeach
-            <div class="page">
-                {{$data->links()}}
-            </div>
-        </div>
-        <aside class="right">
-            <div class="news" style="float:left;">
-                @parent
-                <h3 class="links">
-                    <p>友情<span>链接</span></p>
-                </h3>
-                <ul class="website">
-                    @foreach($links as $l)
-                    <li><a href="{{$l->link_url}}" target="_blank">{{$l->link_name}}</a></li>
-                    @endforeach
+    <!-- content -->
+<div class="am-g am-g-fixed ">
+            <!-- 左侧文章 -->
+        <div class="am-u-md-8">
+            <!-- 轮播 -->
+            <div data-am-widget="slider" class="am-slider am-slider-c3" data-am-slider='{"controlNav":false}' >
+                <ul class="am-slides">
+                    <li>
+                    <a href=""><img src="http://s.amazeui.org/media/i/demos/bing-1.jpg">
+                    <div class="am-slider-desc"><div class="am-slider-counter"><span class="am-active">1</span>/4</div>远方 有一个地方 那里种有我们的梦想</div></a>
+
+                    </li>
+                    <li>
+                    <a href=""><img src="http://s.amazeui.org/media/i/demos/bing-2.jpg">
+                    <div class="am-slider-desc"><div class="am-slider-counter"><span class="am-active">2</span>/4</div>某天 也许会相遇 相遇在这个好地方</div></a>
+
+                    </li>
+                    <li>
+                    <a href=""><img src="http://s.amazeui.org/media/i/demos/bing-3.jpg">
+                    <div class="am-slider-desc"><div class="am-slider-counter"><span class="am-active">3</span>/4</div>不要太担心 只因为我相信 终会走过这条遥远的道路</div></a>
+
+                    </li>
+                    <li>
+                    <a href=""><img src="http://s.amazeui.org/media/i/demos/bing-4.jpg">
+                    <div class="am-slider-desc"><div class="am-slider-counter"><span class="am-active">4</span>/4</div>OH PARA PARADISE 是否那么重要 你是否那么地遥远</div></a>
+
+                    </li>
                 </ul>
             </div>
+            <!-- 轮播 end-->
 
-        </aside>
-    </article>
+            <div class="am-g">
+                @foreach($data as $d)
+                    <a href="{{url('a/'.$d->art_id)}}">
+                      <div class="am-u-sm-4">
+                        <div class="am-thumbnail">
+                          <img src="{{url($d->art_thumb)}}"  />
+                          <h3 class="am-thumbnail-caption">{{$d->art_title}}</h3>
+                        </div>
+                      </div>
+                    </a>
+                @endforeach
+
+            </div>
+        </div>
+            <!-- 左侧文章end -->
+        
+          <!-- 右侧推荐 -->
+        <div class="am-u-md-4 ">
+          <div class="am-panel-group">
+
+            <section class="am-panel am-panel-primary">
+              <div class="am-panel-hd">关于我们</div>
+              <div class="am-panel-bd">
+                <p class="am-thumbnail"><img src="http://source.shengxuezixun.com/baqiye/images/baqiye_erweima.jpg"  alt="扒企业"></p>
+              </div>
+            </section>
+
+            <section class="am-panel am-panel-secondary">
+              <div class="am-panel-hd">热门企业</div>
+              <ul class="am-list blog-list">
+                  @foreach($pics as $d)
+                      <li><a href="{{url('a/'.$d->art_id)}}" title="{{$d->art_title}}">{{$d->art_title}}</a></li>
+                  @endforeach
+              </ul>
+            </section>
+
+            <section class="am-panel am-panel-success">
+              <div class="am-panel-hd">团队成员</div>
+              <div class="am-panel-bd">
+                <ul class="am-avg-sm-4 blog-team">
+                    <p>梦遥奇缘</p>
+                </ul>
+              </div>
+            </section>
+
+            <section class="am-panel am-panel-default">
+              <div class="am-panel-hd">友情链接</div>
+              <div class="am-panel-bd">
+                <ul class="am-avg-sm-4 blog-team">
+                    @foreach($links as $l)
+                    <p><a href="{{$l->link_url}}" target="_blank">{{$l->link_name}}</a></p>
+                    @endforeach
+                </ul>
+              </div>
+            </section>
+          </div>
+        </div>
+          <!-- 右侧推荐 end-->
+
+</div>
+<!-- content end -->
 @endsection

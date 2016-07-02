@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Http\Model\Navs;
+use App\Http\Model\Links;
 use Illuminate\Support\Facades\View;
 
 class CommonController extends Controller
@@ -19,11 +20,16 @@ class CommonController extends Controller
 
         //最新发布文章8篇
         $new = Article::orderBy('art_time','desc')->take(8)->get();
-
+        //友情链接
+        $links = Links::orderBy('link_order','asc')->get();
+        //点击量最高的6篇文章（站长推荐）
+        $pics = Article::orderBy('art_view','desc')->take(6)->get();
         $navs = Navs::all();
 
         View::share('navs',$navs);
         View::share('hot',$hot);
         View::share('new',$new);
+        View::share('links',$links);
+        View::share('pics',$pics);
     }
 }
