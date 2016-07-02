@@ -60,7 +60,7 @@
                 <img src="{{url($d->art_thumb)}}" alt=""/>
                 <div class="am-thumbnail-caption">
                   <h3>{{$d->art_title}}</h3>
-                  <p>...</p>
+                  <p>{{$d->art_description}}</p>
                   <p>
                     <a href="{{url('a/'.$d->art_id)}}"><button class="am-btn am-btn-secondary am-round">阅读更多</button></a>
                   </p>
