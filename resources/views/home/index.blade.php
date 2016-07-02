@@ -39,14 +39,20 @@
 
             <div class="am-g">
                 @foreach($data as $d)
-                    <a href="{{url('a/'.$d->art_id)}}">
-                      <div class="am-u-sm-4">
-                        <div class="am-thumbnail">
-                          <img src="{{url($d->art_thumb)}}"  />
-                          <h3 class="am-thumbnail-caption">{{$d->art_title}}</h3>
+                    
+                    <div class="am-u-sm-12">
+
+                      <div class="am-thumbnail">
+                        <img src="{{url($d->art_thumb)}}" alt=""/>
+                        <div class="am-thumbnail-caption">
+                          <h3>{{$d->art_title}}</h3>
+                          <p>{{$d->art_description}}</p>
+                          <p>
+                            <a href="{{url('a/'.$d->art_id)}}"><button class="am-btn am-btn-secondary am-round">阅读更多</button></a>
+                          </p>
                         </div>
                       </div>
-                    </a>
+                    </div>
                 @endforeach
 
             </div>
