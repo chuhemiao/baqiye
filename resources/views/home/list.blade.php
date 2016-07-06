@@ -68,10 +68,11 @@
               </div>
             </div>
             @endforeach
-            <ul class="am-pagination am-pagination-right">
-                {{$data->links()}}
-            </ul>
+           
           </div>
+          <ul class="am-pagination am-pagination-right">
+              {{$data->links()}}
+          </ul>
           <!-- article list end-->
         </div>
             <!-- 左侧文章end -->
