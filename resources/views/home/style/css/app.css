@@ -1,0 +1,23 @@
+/* Write your styles */
+/*文章*/
+.am-u-sm-4{
+	margin-top: 20px;
+}
+.am-article{
+	margin-top: 40px;
+
+}
+.am-u-sm-12{
+	margin-top: 20px;
+
+}
+.page{ margin:20px 0 0 0; text-align:center; width:100%; overflow: hidden;}
+
+.page ul{}
+.page ul li{display: inline-block; margin:0; float:left;}
+.page ul li span,.page ul li a{margin: 0 2px;height: 26px;line-height: 26px;border-radius: 50%;width: 26px;text-align: center;display: inline-block;}
+.page ul li a {margin: 0 2px;height: 26px;line-height: 26px; border-radius: 50%;width: 26px;text-align: center;display: inline-block;}
+.page ul li.active span,.page ul li a:hover{background: #333;color: #FFF;}
+.page ul li.disabled span{background: #CCC; color: #FFF;}
+.page ul li a{color: #F33;border: #999 1px solid;}
+

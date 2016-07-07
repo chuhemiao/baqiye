@@ -9,9 +9,8 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="Cache-Control" content="no-siteapp"/>
     <meta name="baidu-site-verification" content="a77aBDuWqC" />
-    <link href="{{ URL::asset('//source.shengxuezixun.com/baqiye/images/amazeui.min.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('//source.shengxuezixun.com/baqiye/images/app.css') }}" rel="stylesheet">
-    <!-- <link href="{{ URL::asset('//source.shengxuezixun.com/baqiye/images/style.css') }}" rel="stylesheet"> -->
+    <link href="{{asset('resources/views/home/style/css/amazeui.min.css')}}" rel="stylesheet">
+    <link href="{{asset('resources/views/home/style/css/app.css')}}" rel="stylesheet">
     <script>
     var _hmt = _hmt || [];
     (function() {
@@ -48,7 +47,7 @@
 <!-- footer -->
 <div data-am-widget="gotop" class="am-gotop am-gotop-fixed" >
   <a href="#top" title="">
-      <img class="am-gotop-icon-custom" src="http://source.shengxuezixun.com/images/scrollup.png" />
+      <img class="am-gotop-icon-custom" src="{{asset('resources/views/home/style/images/scrollup.png')}}" />
   </a>
 </div>
   
@@ -59,15 +58,16 @@
 </footer>
 <!-- footer end -->
 <!--[if lt IE 9]>
-<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
-<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
-<script src="http://source.shengxuezixun.com/baqiye/images/amazeui.ie8polyfill.min.js"></script>
+<script src="{{asset('resources/views/home/style/js/jquery.min.js')}}"></script>
+<script src="{{asset('resources/views/home/style/js/modernizr.js')}}"></script>
+<script src="{{asset('resources/views/home/style/js/amazeui.ie8polyfill.min.js')}}"></script>
+
 <![endif]-->
 
 <!--[if (gte IE 9)|!(IE)]><!-->
-<script src="http://source.shengxuezixun.com/baqiye/images/jquery.min.js"></script>
+<script src="{{asset('resources/views/home/style/js/jquery.min.js')}}"></script>
 <!--<![endif]-->
-<script src="http://source.shengxuezixun.com/baqiye/images/amazeui.min.js"></script>
+<script src="{{asset('resources/views/home/style/js/amazeui.min.js')}}"></script>
 <script>
 (function(){
     var bp = document.createElement('script');
