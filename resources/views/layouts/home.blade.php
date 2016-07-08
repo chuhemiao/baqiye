@@ -20,6 +20,7 @@
       s.parentNode.insertBefore(hm, s);
     })();
     </script>
+    <script type="text/javascript" src="//tajs.qq.com/stats?sId=57256522" charset="UTF-8"></script>
 </head>
 <body>
 <!-- header -->
