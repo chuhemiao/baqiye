@@ -16,6 +16,9 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/', 'Home\IndexController@index');
     Route::get('/cate/{cate_id}', 'Home\IndexController@cate');
     Route::get('/a/{art_id}', 'Home\IndexController@article');
+    // 星座
+    Route::any('/aqua', 'Home\IndexController@aqua');
+
 
     Route::any('admin/login', 'Admin\LoginController@login');
     Route::get('admin/code', 'Admin\LoginController@code');

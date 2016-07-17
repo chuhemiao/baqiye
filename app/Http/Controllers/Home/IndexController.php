@@ -44,4 +44,14 @@ class IndexController extends CommonController
         $data = Article::where('cate_id',$field->cate_id)->orderBy('art_id','asc')->take(6)->get();
         return view('home.new',compact('field','article','data'));
     }
+    public function aqua()
+    {
+        // $name = $_POST['name'];
+        // $name = $_POST['name'];
+        
+        //星座测试
+        $aqua = Article::orderBy('art_time','desc')->paginate(6);
+
+        return view('home.aqua',compact('pics','aqua'));
+    }
 }
