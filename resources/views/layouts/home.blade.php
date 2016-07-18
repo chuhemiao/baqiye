@@ -56,6 +56,7 @@
 <footer data-am-widget="footer" class="am-footer am-footer-default" data-am-footer="{  }">
     <div class="am-footer-miscs ">
         <p>{{Config::get('web.copyright')}}</p>
+        <a href="http://baqiye.com/sitemap.xml">站点地图</a>
     </div>
 </footer>
 <!-- footer end -->
