@@ -8,6 +8,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="renderer" content="webkit">
     <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <meta name="msvalidate.01" content="CBFBA2717429C4ABAD657F93131DFA1E" />
     <meta name="baidu-site-verification" content="a77aBDuWqC" />
     <link href="{{asset('resources/views/home/style/css/amazeui.min.css')}}" rel="stylesheet">
     <link href="{{asset('resources/views/home/style/css/app.css')}}" rel="stylesheet">
