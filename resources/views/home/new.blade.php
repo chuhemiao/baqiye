@@ -63,7 +63,7 @@
                     <div class="am-article-bd">
                       {!! $field->art_content !!}
                     </div>
-                    <h3>关键字：<span>{{$field->art_tag}}</span></h3>
+                    <h3>关键字：<span>{{$field->art_tag}} <small><div id="share-baqiye" class="am-fr" data-sites="weibo,wechat,linkedin,facebook,twitter,douban"></div></small></span> </h3>
                     <div data-am-widget="duoshuo" class="am-duoshuo am-duoshuo-default" data-ds-short-name="baqiye">
                       <div class="ds-thread" data-thread-key="{{$field->art_id}}" data-title="{{$field->art_title}}">
                       </div>

@@ -12,6 +12,7 @@
     <meta name="baidu-site-verification" content="a77aBDuWqC" />
     <link href="{{asset('resources/views/home/style/css/amazeui.min.css')}}" rel="stylesheet">
     <link href="{{asset('resources/views/home/style/css/app.css')}}" rel="stylesheet">
+    <link href="{{ URL::asset('//source.shengxuezixun.com/baqiye/images/share.min.css') }}" rel="stylesheet">
     <script>
     var _hmt = _hmt || [];
     (function() {
@@ -71,6 +72,7 @@
 <script src="{{asset('resources/views/home/style/js/jquery.min.js')}}"></script>
 <!--<![endif]-->
 <script src="{{asset('resources/views/home/style/js/amazeui.min.js')}}"></script>
+<script src="{{ URL::asset('//source.shengxuezixun.com/baqiye/images/jquery.share.min.js') }}"></script>
 <script>
 (function(){
     var bp = document.createElement('script');
@@ -84,6 +86,9 @@
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(bp, s);
 })();
+</script>
+<script>
+    $('#share-baqiye').share();
 </script>
 </body>
 </html>
