@@ -11,7 +11,7 @@ class IndexController extends CommonController
     {
         
         //图文列表5篇（带分页）
-        $data = Article::orderBy('art_time','desc')->paginate(6);
+        $data = Article::orderBy('art_time','desc')->paginate(10);
 
         return view('home.index',compact('pics','data'));
     }
@@ -19,7 +19,7 @@ class IndexController extends CommonController
     public function cate($cate_id)
     {
         //图文列表4篇（带分页）
-        $data = Article::where('cate_id',$cate_id)->orderBy('art_time','desc')->paginate(4);
+        $data = Article::where('cate_id',$cate_id)->orderBy('art_time','desc')->paginate(10);
         // dd($data->links());
         //查看次数自增
         Category::where('cate_id',$cate_id)->increment('cate_view');
